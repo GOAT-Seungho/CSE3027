@@ -140,7 +140,7 @@ int main(int argc, char *argv[]) {
         }
 
         else if (strcmp(tok, "/pdf") == 0) {
-            int fd = open("./7years.pdf", O_RDWR);
+            int fd = open("./sample.pdf", O_RDWR);
             len = lseek(fd, 0, SEEK_END);
             lseek(fd, 0, SEEK_SET);
             read(fd, data, sizeof(data) - 1);
