@@ -97,7 +97,7 @@ int main(int argc, char *argv[]) {
                     "<a href=\"./jpeg\">JPEG</a><br/>\n"
                     "<a href=\"./gif\">GIF</a><br/>\n"
                     "<a href=\"./mp3\">MUSIC</a><br/>\n"
-                    "<a href=\"./pdf\">PDF</a><br/>\n"
+                    "<a href=\"./pdf.pdf\">PDF</a><br/>\n"
                 "</body>\n"
                 "</html>\n"
                 "\r\n");
@@ -134,7 +134,7 @@ int main(int argc, char *argv[]) {
             , len);
         }
 
-        else if (strcmp(tok, "/pdf") == 0) {
+        else if (strcmp(tok, "/pdf.pdf") == 0) {
             int fd = open("./sample.pdf", O_RDWR);
             len = lseek(fd, 0, SEEK_END);
             lseek(fd, 0, SEEK_SET);
